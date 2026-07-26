@@ -26,6 +26,21 @@ export function About() {
             <div className="absolute -top-6 -left-6 w-48 h-48 bg-accent/20 rounded-full blur-3xl -z-10"></div>
             <div className="absolute -bottom-12 -right-12 w-64 h-64 bg-primary/20 rounded-full blur-3xl -z-10"></div>
             
+            {/* Floating Logo Badge */}
+            <motion.div 
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="absolute -top-6 -right-4 bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-xl border border-gray-100 flex items-center gap-3 z-20"
+            >
+              <img src="/assets/logo.jpg" alt="SGM Logo" className="w-12 h-12 object-contain rounded-full border border-accent/40" />
+              <div>
+                <p className="text-secondary font-extrabold text-sm font-montserrat leading-tight">Sarthak Global Mobility</p>
+                <p className="text-[10px] text-amber-600 font-bold uppercase tracking-wider">Official Service Provider</p>
+              </div>
+            </motion.div>
+
             {/* Floating Badge */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}

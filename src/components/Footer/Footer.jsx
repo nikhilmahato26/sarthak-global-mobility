@@ -39,10 +39,20 @@ export function Footer() {
           
           {/* Brand */}
           <div className="space-y-6">
-            <a href="#" className="flex items-center gap-2">
-              <span className="text-2xl font-extrabold tracking-tight text-white">
-                <span className="font-playfair">SGM</span><span className="text-accent">GLOBAL</span>
-              </span>
+            <a href="#" className="flex items-center gap-3">
+              <img 
+                src="/assets/logo.jpg" 
+                alt="SGM Sarthak Global Mobility" 
+                className="h-14 w-auto object-contain rounded-full border-2 border-accent/60 shadow-lg bg-white p-0.5" 
+              />
+              <div>
+                <span className="text-2xl font-extrabold tracking-tight text-white block leading-none">
+                  <span className="font-playfair">SGM</span> <span className="text-accent">GLOBAL</span>
+                </span>
+                <span className="text-xs font-semibold tracking-wider text-accent uppercase block mt-1">
+                  Sarthak Global Mobility
+                </span>
+              </div>
             </a>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
               Premium airport transfers, executive chauffeur services, and luxury car rentals across India. Reliable, safe, and professional mobility solutions.

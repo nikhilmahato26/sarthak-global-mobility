@@ -27,10 +27,20 @@ export function Navbar() {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
-          <span className={`text-2xl font-extrabold tracking-tight ${isScrolled ? 'text-secondary' : 'text-white'}`}>
-            <span className="font-playfair">SGM</span><span className="text-accent">GLOBAL</span>
-          </span>
+        <a href="#" className="flex items-center gap-3 group">
+          <img 
+            src="/assets/logo.jpg" 
+            alt="SGM Sarthak Global Mobility" 
+            className="h-10 md:h-12 w-auto object-contain rounded-full shadow-md border-2 border-accent/40 group-hover:scale-105 transition-transform bg-white p-0.5" 
+          />
+          <div className="flex flex-col">
+            <span className={`text-xl md:text-2xl font-extrabold tracking-tight leading-none ${isScrolled ? 'text-secondary' : 'text-white'}`}>
+              <span className="font-playfair">SGM</span><span className="text-accent">GLOBAL</span>
+            </span>
+            <span className="text-[9px] font-bold tracking-wider uppercase text-amber-500 mt-0.5">
+              Sarthak Global Mobility
+            </span>
+          </div>
         </a>
 
         {/* Desktop Nav */}

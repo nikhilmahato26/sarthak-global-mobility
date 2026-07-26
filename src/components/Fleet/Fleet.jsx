@@ -2,19 +2,19 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
 const fleetData = [
-  { category: 'Hatchback', name: 'Swift / WagonR / Celerio', image: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=800', idealFor: 'Budget City Travel' },
+  { category: 'Premium Hybrid MUV', name: 'Toyota Innova Hycross', image: '/assets/innova_hycross.png', idealFor: 'Executive & VIP Hybrid Travel', badge: 'HYBRID LUXURY' },
+  { category: 'Force Urbania', name: 'Force Urbania (10 / 13 / 17 Seater)', image: '/assets/urbania.png', idealFor: 'VVIP Group & Delegation Travel', badge: 'LUXURY VAN' },
+  { category: 'Premium MUV', name: 'Toyota Innova Crysta', image: '/assets/innova.png', idealFor: 'Corporate & Long Trips', badge: 'MOST POPULAR' },
   { category: 'Sedan', name: 'Maruti Suzuki Dzire', image: '/assets/dzire.png', idealFor: 'Airport & Business Travel' },
+  { category: 'MUV', name: 'Maruti Suzuki Ertiga', image: '/assets/ertiga.png', idealFor: 'Family & Group Travel' },
   { category: 'Premium Sedan', name: 'Honda City / Virtus / Slavia', image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&q=80&w=800', idealFor: 'Executive Travel' },
   { category: 'SUV', name: 'Brezza / Venue / Nexon', image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&q=80&w=800', idealFor: 'Compact City Travel' },
   { category: 'Mid-Size SUV', name: 'Hyundai Creta / Kia Seltos', image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800', idealFor: 'Comfortable Journeys' },
   { category: 'Premium SUV', name: 'Mahindra XUV700 / Safari', image: 'https://images.unsplash.com/photo-1503370973809-b4b9b7754b2d?auto=format&fit=crop&q=80&w=800', idealFor: 'Family Outstation' },
-  { category: 'MUV', name: 'Maruti Suzuki Ertiga', image: '/assets/ertiga.png', idealFor: 'Family & Group Travel' },
-  { category: 'Premium MUV', name: 'Toyota Innova Crysta', image: '/assets/innova.png', idealFor: 'Corporate & Long Trips' },
   { category: 'Luxury SUV', name: 'Toyota Fortuner Legender', image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800', idealFor: 'VIP Outstation' },
   { category: 'Luxury Sedan', name: 'Mercedes-Benz E-Class', image: 'https://images.unsplash.com/photo-1616423640778-28d1b53229bd?auto=format&fit=crop&q=80&w=800', idealFor: 'Executive & VIP' },
   { category: 'Executive Luxury', name: 'Mercedes-Benz S-Class', image: '/assets/hero_airport.png', idealFor: 'Elite VVIP Transportation' },
   { category: 'Luxury MPV', name: 'Toyota Vellfire / Lexus LM', image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800', idealFor: 'Ultra Luxury Group' },
-  { category: 'Force Urbania', name: '10 / 13 / 17 Seater Urbania', image: '/assets/urbania.png', idealFor: 'Luxury Group Chauffeur' },
   { category: 'Tempo Traveller', name: '9 / 12 / 17 / 26 Seater', image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=800', idealFor: 'Group Tours & Events' },
   { category: 'Luxury Coach Bus', name: 'Volvo / Scania / BharatBenz', image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800', idealFor: 'Large Event Logistics' },
   { category: 'Electric Vehicles', name: 'BYD e6 / MG ZS EV / Tata EV', image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&q=80&w=800', idealFor: 'Eco-Friendly Mobility' },
@@ -60,6 +60,11 @@ export function Fleet() {
                 <div className="absolute top-2 left-2 bg-secondary/90 text-white backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">
                   {vehicle.category}
                 </div>
+                {vehicle.badge && (
+                  <div className="absolute top-2 right-2 bg-amber-500 text-slate-950 font-extrabold px-2 py-0.5 rounded text-[9px] uppercase tracking-wider shadow-md animate-pulse">
+                    {vehicle.badge}
+                  </div>
+                )}
               </div>
               <div className="p-4 flex flex-col flex-1 justify-between">
                 <div>

@@ -52,13 +52,16 @@ export function BookingForm() {
             </div>
           </SelectTrigger>
           <SelectContent>
+            <SelectItem value="innova-hycross">Toyota Innova Hycross (Hybrid Luxury)</SelectItem>
+            <SelectItem value="urbania">Force Urbania (10/13/17 Seater Van)</SelectItem>
+            <SelectItem value="premium-muv">Toyota Innova Crysta</SelectItem>
             <SelectItem value="sedan">Sedan (Dzire, Amaze)</SelectItem>
-            <SelectItem value="premium-sedan">Premium Sedan (City, Verna)</SelectItem>
-            <SelectItem value="suv">SUV (Creta, Seltos)</SelectItem>
+            <SelectItem value="premium-sedan">Premium Sedan (City, Verna, Slavia)</SelectItem>
+            <SelectItem value="suv">SUV (Creta, Seltos, Brezza)</SelectItem>
             <SelectItem value="muv">MUV (Ertiga, Carens)</SelectItem>
-            <SelectItem value="premium-muv">Premium MUV (Innova Crysta)</SelectItem>
-            <SelectItem value="luxury">Luxury (Mercedes, BMW)</SelectItem>
-            <SelectItem value="traveller">Tempo Traveller</SelectItem>
+            <SelectItem value="luxury-suv">Luxury SUV (Fortuner, XUV700)</SelectItem>
+            <SelectItem value="luxury">Luxury Executive (Mercedes E/S Class)</SelectItem>
+            <SelectItem value="traveller">Tempo Traveller (9 to 26 Seater)</SelectItem>
           </SelectContent>
         </Select>
 
