@@ -3,21 +3,21 @@ import { Button } from '@/components/ui/button';
 
 const fleetData = [
   { category: 'Premium Hybrid MUV', name: 'Toyota Innova Hycross', image: '/assets/innova_hycross.png', idealFor: 'Executive & VIP Hybrid Travel', badge: 'HYBRID LUXURY' },
-  { category: 'Force Urbania', name: 'Force Urbania (10 / 13 / 17 Seater)', image: '/assets/urbania.png', idealFor: 'VVIP Group & Delegation Travel', badge: 'LUXURY VAN' },
+  { category: 'Force Urbania', name: 'Force Urbania (10 / 13 / 17 Seater)', image: 'https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Urbania/11849/1763466348855/front-left-side-47.jpg', idealFor: 'VVIP Group & Delegation Travel', badge: 'LUXURY VAN' },
   { category: 'Premium MUV', name: 'Toyota Innova Crysta', image: '/assets/innova.png', idealFor: 'Corporate & Long Trips', badge: 'MOST POPULAR' },
   { category: 'Sedan', name: 'Maruti Suzuki Dzire', image: '/assets/dzire.png', idealFor: 'Airport & Business Travel' },
   { category: 'MUV', name: 'Maruti Suzuki Ertiga', image: '/assets/ertiga.png', idealFor: 'Family & Group Travel' },
-  { category: 'Premium Sedan', name: 'Honda City / Virtus / Slavia', image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&q=80&w=800', idealFor: 'Executive Travel' },
+  { category: 'Premium Sedan', name: 'Honda City / Virtus / Slavia', image: 'https://imgd.aeplcdn.com/642x361/n/cw/ec/175951/slavia-exterior-right-front-three-quarter-3.jpeg?isig=0&q=75', idealFor: 'Executive Travel' },
   { category: 'SUV', name: 'Brezza / Venue / Nexon', image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&q=80&w=800', idealFor: 'Compact City Travel' },
-  { category: 'Mid-Size SUV', name: 'Hyundai Creta / Kia Seltos', image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800', idealFor: 'Comfortable Journeys' },
+  { category: 'Mid-Size SUV', name: 'Hyundai Creta / Kia Seltos', image: 'https://img.gaadicdn.com/images/car-images/large/Hyundai/Creta/11439/1777531540562/Atlas-White_d8dfe5.jpg', idealFor: 'Comfortable Journeys' },
   { category: 'Premium SUV', name: 'Mahindra XUV700 / Safari', image: '/assets/xuv700.png', idealFor: 'Family & Executive Outstation', badge: 'PREMIUM SUV' },
-  { category: 'Luxury SUV', name: 'Toyota Fortuner Legender', image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800', idealFor: 'VIP Outstation' },
+  { category: 'Luxury SUV', name: 'Toyota Fortuner Legender', image: 'https://www.topgearmag.in/uploads/News/Image/news_snapedit_1713784276991jpg1713785362.jpg', idealFor: 'VIP Outstation' },
   { category: 'Luxury Sedan', name: 'Mercedes-Benz E-Class', image: 'https://stimg.cardekho.com/images/carexteriorimages/930x620/Mercedes-Benz/E-Class/9790/1763471140336/front-left-side-47.jpg', idealFor: 'Executive & VIP Travel', badge: 'EXECUTIVE CLASS' },
   { category: 'Executive Luxury', name: 'Mercedes-Benz S-Class', image: '/assets/mercedes_benz.png', idealFor: 'Elite VVIP Transportation', badge: 'VVIP LUXURY' },
-  { category: 'Luxury MPV', name: 'Toyota Vellfire / Lexus LM', image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800', idealFor: 'Ultra Luxury Group' },
-  { category: 'Tempo Traveller', name: '9 / 12 / 17 / 26 Seater', image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=800', idealFor: 'Group Tours & Events' },
+  { category: 'Luxury MPV', name: 'Toyota Vellfire / Lexus LM', image: 'https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Vellfire/10337/1755846282322/front-left-side-47.jpg?imwidth=420&impolicy=resize', idealFor: 'Ultra Luxury Group' },
+  { category: 'Tempo Traveller', name: '9 / 12 / 17 / 26 Seater', image: 'https://www.jcrcab.com/wp-content/uploads/2020/07/Force-Tempo-Traveller-non-ac-1250x917.jpg', idealFor: 'Group Tours & Events' },
   { category: 'Luxury Coach Bus', name: 'Volvo / Scania / BharatBenz', image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800', idealFor: 'Large Event Logistics' },
-  { category: 'Electric Vehicles', name: 'BYD e6 / MG ZS EV / Tata EV', image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&q=80&w=800', idealFor: 'Eco-Friendly Mobility' },
+  { category: 'Electric Vehicles', name: 'BYD e6 / MG ZS EV / Tata EV', image: 'https://mgmotor.scene7.com/is/image/mgmotor/zs-img-dsc-0318?$mg-rgb-tablet-image-responsive$&fmt=png-alpha', idealFor: 'Eco-Friendly Mobility' },
 ];
 
 export function Fleet() {

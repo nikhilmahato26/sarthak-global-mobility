@@ -55,7 +55,7 @@ export function Footer() {
               </div>
             </a>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-              Premium airport transfers, executive chauffeur services, and luxury car rentals across India. Reliable, safe, and professional mobility solutions.
+              Premium airport transfers, employee transportation, executive chauffeur services, and luxury car rentals across India. Reliable, safe, and professional mobility solutions.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent hover:text-secondary transition-colors">

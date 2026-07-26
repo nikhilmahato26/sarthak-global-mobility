@@ -10,7 +10,7 @@ export function BookingForm() {
   return (
     <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-white/20">
       <div className="flex items-center gap-4 mb-6 pb-4 border-b border-gray-100 overflow-x-auto no-scrollbar">
-        {['one-way', 'round-trip', 'airport', 'local'].map((type) => (
+        {['one-way', 'round-trip', 'airport', 'local', 'employee-transport'].map((type) => (
           <button
             key={type}
             onClick={() => setTripType(type)}
@@ -20,7 +20,7 @@ export function BookingForm() {
                 : 'bg-gray-50 text-gray-600 hover:bg-gray-100'
             }`}
           >
-            {type.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+            {type === 'employee-transport' ? 'Employee Transport' : type.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
           </button>
         ))}
       </div>

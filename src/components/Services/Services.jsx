@@ -4,28 +4,39 @@ import { ArrowRight } from 'lucide-react';
 const services = [
   {
     title: 'Airport Transfers',
+    description: 'Punctual flight tracking & seamless pickup/drop services across all major airports.',
     image: 'https://images.unsplash.com/photo-1530521954074-e64f6810b32d?auto=format&fit=crop&q=80&w=800',
-    span: 'col-span-1 md:col-span-2 row-span-2'
+    span: 'col-span-1 md:col-span-2'
+  },
+  {
+    title: 'Employee Transportation',
+    description: 'Dedicated daily staff pick & drop shuttles, roster management, and corporate commuting.',
+    image: '/assets/employee_transport.png',
+    span: 'col-span-1 md:col-span-1'
   },
   {
     title: 'Corporate Mobility',
+    description: 'Executive chauffeur cabs, monthly rentals, and corporate travel solutions.',
     image: 'https://images.unsplash.com/photo-1554774853-719586f82d77?auto=format&fit=crop&q=80&w=800',
-    span: 'col-span-1'
+    span: 'col-span-1 md:col-span-1'
   },
   {
     title: 'Outstation Cabs',
+    description: 'Safe, comfortable outstation & intercity rides with professional verified drivers.',
     image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=800',
-    span: 'col-span-1'
+    span: 'col-span-1 md:col-span-1'
   },
   {
-    title: 'Luxury Rentals',
+    title: 'Luxury & VVIP Rentals',
+    description: 'Mercedes-Benz, Fortuner, Innova Hycross & VIP vehicles for weddings & delegates.',
     image: 'https://images.unsplash.com/photo-1503370973809-b4b9b7754b2d?auto=format&fit=crop&q=80&w=800',
-    span: 'col-span-1'
+    span: 'col-span-1 md:col-span-2'
   },
   {
-    title: 'Employee Transport',
-    image: 'https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?auto=format&fit=crop&q=80&w=800',
-    span: 'col-span-1'
+    title: 'Event & Delegation Fleet',
+    description: 'Force Urbania & Tempo Travellers for large corporate delegations, events & group travel.',
+    image: '/assets/urbania.png',
+    span: 'col-span-1 md:col-span-1'
   }
 ];
 
@@ -64,15 +75,15 @@ export function Services() {
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[800px] md:h-[600px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[500px]">
           {services.map((service, index) => (
             <motion.div 
               key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`relative rounded-3xl overflow-hidden group cursor-pointer ${service.span}`}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={`relative rounded-3xl overflow-hidden group cursor-pointer border border-gray-100 min-h-[260px] flex flex-col justify-end ${service.span}`}
             >
               <img 
                 src={service.image} 
@@ -80,14 +91,15 @@ export function Services() {
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/40 to-transparent"></div>
               
-              <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 flex flex-col justify-end">
-                <h3 className="text-2xl md:text-3xl font-playfair font-bold text-white mb-2">{service.title}</h3>
-                <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300 overflow-hidden">
-                  <p className="text-white/80 font-medium flex items-center gap-2 mt-2">
-                    Explore Service <ArrowRight size={16} />
-                  </p>
+              <div className="relative z-10 p-6 md:p-8 flex flex-col justify-end h-full">
+                <h3 className="text-xl md:text-2xl font-playfair font-bold text-white mb-2">{service.title}</h3>
+                <p className="text-white/80 text-xs md:text-sm mb-4 leading-relaxed max-w-md">
+                  {service.description}
+                </p>
+                <div className="flex items-center gap-2 text-accent font-bold text-xs uppercase tracking-wider group-hover:translate-x-1 transition-transform">
+                  Book Service <ArrowRight size={14} />
                 </div>
               </div>
             </motion.div>

@@ -32,8 +32,8 @@ export function Hero() {
                 For Every Journey
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-lg font-light leading-relaxed">
-              Luxury Airport Transfers • Corporate Mobility • Outstation Travel • Executive Chauffeur Services
+            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl font-light leading-relaxed">
+              Luxury Airport Transfers • Corporate Mobility • Employee Transportation • Outstation Travel • Executive Chauffeur Services
             </p>
           </motion.div>
         </div>
