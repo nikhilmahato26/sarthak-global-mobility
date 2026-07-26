@@ -41,6 +41,13 @@ const services = [
 ];
 
 export function Services() {
+  const handleServiceBook = (title, description) => {
+    const targetPhone = '919891335351';
+    const msg = `*SERVICE INQUIRY - SGM GLOBAL MOBILITY*\n\nHello, I am interested in booking *${title}*.\n\n📌 *Details:* ${description}\n\nPlease share available vehicle options and rates!`;
+    const whatsappUrl = `https://wa.me/${targetPhone}?text=${encodeURIComponent(msg)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section id="services" className="py-24 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
@@ -67,7 +74,10 @@ export function Services() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 md:mt-auto"
           >
-             <button className="bg-secondary text-white hover:bg-primary transition-colors px-8 py-4 rounded-full font-semibold flex items-center gap-2">
+             <button 
+               onClick={() => handleServiceBook("Custom Corporate Mobility Solution", "Corporate & Custom Fleet Transport")}
+               className="bg-secondary text-white hover:bg-primary transition-colors px-8 py-4 rounded-full font-semibold flex items-center gap-2"
+             >
                 BROWSE ALL SERVICES
                 <ArrowRight size={18} />
              </button>
@@ -83,6 +93,7 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              onClick={() => handleServiceBook(service.title, service.description)}
               className={`relative rounded-3xl overflow-hidden group cursor-pointer border border-gray-100 min-h-[260px] flex flex-col justify-end ${service.span}`}
             >
               <img 

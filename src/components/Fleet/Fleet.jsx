@@ -21,6 +21,13 @@ const fleetData = [
 ];
 
 export function Fleet() {
+  const handleVehicleBook = (vehicleName, category, idealFor) => {
+    const targetPhone = '919891335351';
+    const msg = `*VEHICLE BOOKING INQUIRY - SGM GLOBAL MOBILITY*\n\nHello, I want to book the *${vehicleName}* (${category}).\n\n🎯 *Usage:* ${idealFor}\n\nPlease share availability, per km / daily rental rates!`;
+    const whatsappUrl = `https://wa.me/${targetPhone}?text=${encodeURIComponent(msg)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section id="fleet" className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
@@ -36,7 +43,7 @@ export function Fleet() {
               Premium Vehicles For Every Journey
             </h2>
             <p className="text-muted-foreground mt-3 max-w-2xl text-base">
-              From budget city cabs to VVIP executive sedans and luxury coaches, explore our meticulously maintained fleet.
+              From budget city cabs to VVIP executive sedans, Innova Hycross, Force Urbania and luxury coaches, explore our fleet.
             </p>
           </motion.div>
         </div>
@@ -49,6 +56,7 @@ export function Fleet() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: (index % 5) * 0.05 }}
+              onClick={() => handleVehicleBook(vehicle.name, vehicle.category, vehicle.idealFor)}
               className="bg-gray-50 rounded-xl overflow-hidden group cursor-pointer border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col"
             >
               <div className="relative aspect-video overflow-hidden">
@@ -71,7 +79,13 @@ export function Fleet() {
                   <h3 className="text-sm md:text-base font-bold text-secondary mb-1 leading-tight group-hover:text-primary transition-colors">{vehicle.name}</h3>
                   <p className="text-xs text-muted-foreground mb-3">{vehicle.idealFor}</p>
                 </div>
-                <Button className="w-full bg-accent text-secondary hover:bg-secondary hover:text-white transition-colors h-9 text-xs rounded-lg font-bold shadow-sm">
+                <Button 
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleVehicleBook(vehicle.name, vehicle.category, vehicle.idealFor);
+                  }}
+                  className="w-full bg-accent text-secondary hover:bg-secondary hover:text-white transition-colors h-9 text-xs rounded-lg font-bold shadow-sm"
+                >
                   Book Now
                 </Button>
               </div>

@@ -61,9 +61,15 @@ export function Navbar() {
           <a href="tel:+919891335351" className={`flex items-center gap-2 text-sm font-bold transition-colors hover:text-accent ${isScrolled ? 'text-secondary' : 'text-white'}`}>
             <Phone size={16} /> +91 9891335351
           </a>
-          <Button className="bg-accent text-secondary hover:bg-secondary hover:text-white transition-colors rounded-full px-6 font-semibold shadow-lg">
-            Book Now
-          </Button>
+          <a 
+            href="https://wa.me/919891335351?text=Hello%20SGM%20Global%20Mobility!%20I%20would%20like%20to%20book%20a%20cab%20/%20vehicle." 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <Button className="bg-accent text-secondary hover:bg-secondary hover:text-white transition-colors rounded-full px-6 font-semibold shadow-lg">
+              Book Now
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -98,9 +104,15 @@ export function Navbar() {
                <a href="tel:+919891335351" className="flex items-center justify-center gap-2 text-secondary font-bold p-2 bg-slate-50 rounded-md">
                 <Phone size={18} /> +91 9891335351
               </a>
-              <Button className="w-full bg-accent text-secondary hover:bg-secondary hover:text-white font-semibold">
-                Book Now
-              </Button>
+              <a 
+                href="https://wa.me/919891335351?text=Hello%20SGM%20Global%20Mobility!%20I%20would%20like%20to%20book%20a%20cab%20/%20vehicle." 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button className="w-full bg-accent text-secondary hover:bg-secondary hover:text-white font-semibold">
+                  Book Now
+                </Button>
+              </a>
             </div>
           </motion.div>
         )}
