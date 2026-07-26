@@ -7,7 +7,7 @@ export function Hero() {
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/src/assets/hero_airport.png" 
+          src="/assets/hero_airport.png" 
           alt="Luxury Car Airport Transfer" 
           className="w-full h-full object-cover object-center"
         />

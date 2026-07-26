@@ -17,7 +17,7 @@ export function About() {
               className="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
             >
               <img 
-                src="/src/assets/hero_airport.png" 
+                src="/assets/hero_airport.png" 
                 alt="Luxury Corporate Travel" 
                 className="w-full h-full object-cover"
               />
